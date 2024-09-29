@@ -1,0 +1,20 @@
+name: Run Bash Color Changer
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run_color_changer:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Make Bash Color Changer executable
+        run: chmod +x Bash-Color-Changer.sh
+
+      - name: Run Bash Color Changer
+        run: ./Bash-Color-Changer.sh
